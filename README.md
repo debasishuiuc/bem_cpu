@@ -1,104 +1,107 @@
-# BEM CPU vs GPU Mesh Generator
+# BEM CPU: OpenMP-Based Boundary Element Method Mesh Generator
 
-This project implements and benchmarks a recursive 6-node triangle mesh generator for the surface of a unit sphere using:
+This repository implements a fully CPU-based boundary element method (BEM) mesh generator and geometry analyzer using OpenMP for parallelization. The original CUDA-based code has been entirely removed for simplicity and portability.
 
-* 🧠 **CPU version**: Parallelized with OpenMP
-* 🚀 **GPU version**: Written in CUDA C for acceleration
+---
 
-Benchmarks compare CPU and GPU performance across different mesh subdivision levels (`Ndiv`).
+## ✅ Current Status
+
+- Pure C++ implementation with OpenMP parallelism.
+- No GPU or CUDA dependencies.
+- Generates 6-node curved triangular meshes on a unit sphere.
+- Computes:
+  - Element-to-element connectivity (`nbe`)
+  - Node-to-element connectivity (`ne`)
+  - Accurate surface area, volume, and centroid
+  - Element and node normals
+  - Mean curvature per element
+- Supports text and VTK output for visualization in ParaView.
+- Fully validated for the base icosahedron (Ndiv = 0) against legacy outputs.
 
 ---
 
 ## 📁 Project Structure
 
 ```
-bem_cpu_gpu/
-├── bin/                   # Executables
-├── build/                 # CMake build directory
-├── include/               # Header files
-├── main/                  # main.cpp and driver files
-├── output/                # Mesh output files
-├── src/                   # Source code (CPU and CUDA)
-├── tests/                 # Benchmarking scripts + logs
-├── CMakeLists.txt         # CMake config
-├── Dockerfile             # (Optional) container support
-├── benchmark_cpu_gpu.sh   # Benchmark automation
-├── plot_speedup.py        # Benchmark analysis & plotting
-└── README.md              # This file
+bem_cpu/
+├── bin/             # Executables
+├── build/           # CMake build artifacts
+├── include/         # C++ header files
+├── main/            # Main entry point (main.cpp)
+├── output/          # Mesh data output: .txt and .vtk
+├── src/             # C++ source files
+├── tests/           # Benchmark scripts and timing analysis
+├── CMakeLists.txt   # Build configuration
+├── Dockerfile       # Optional Docker support
+├── README.md        # This file
+└── run_docker.sh    # Docker helper script
 ```
 
 ---
 
-## ⚙️ Compilation
+## ⚙️ Features
 
-### CPU Version
+### Mesh Generation
+- Recursive subdivision of an icosahedron.
+- Six-node curved triangle elements (`trgl6_icos.cpp`).
+- Midpoint insertion and deduplication (`deduplicate.cpp`).
+
+### Connectivity
+- Element-to-element (`nbe`) and node-to-element (`ne`) connectivity.
+- Verified against reference Fortran code.
+
+### Geometry Analysis
+- Computation of:
+  - Total surface area
+  - Volume enclosed
+  - Centroid
+  - Element and node normals
+  - Element curvature
+  - Inverse moment matrix (`Mmat⁻¹`)
+
+### Output
+- `.txt` files: `p.txt`, `n.txt`, `ne.txt`, `nbe.txt`, `crvmel.txt`, etc.
+- `.vtk` file for visualization in ParaView.
+
+---
+
+## 🧪 Tests and Benchmarks
+
+The `tests/` folder contains:
+- `plot_speedup.py`: script to visualize OpenMP speedup.
+- `timing.py`: analyze performance across thread counts.
+- Legacy scripts referencing GPU benchmarks (can be cleaned up).
+
+---
+
+## 🛠️ Build Instructions
 
 ```bash
-cmake -DUSE_CUDA=OFF -B build -S .
-cmake --build build --parallel
+mkdir build
+cd build
+cmake ..
+make -j
+./bin/meshgen --ndiv 0 --write
 ```
 
-### GPU Version
+---
 
-```bash
-cmake -DUSE_CUDA=ON -B build -S .
-cmake --build build --parallel
-```
+## 🔐 GitHub SSH Setup
 
-The executable will be at `./bin/meshgen`.
+SSH access to GitHub has been configured and the repository has been successfully pushed to:
+
+📍 `git@github.com:debasishuiuc/bem_cpu.git`
 
 ---
 
-## 🚀 Running the Mesh Generator
+## 🔄 Future Work
 
-```bash
-./bin/meshgen --ndiv <N> --threads <num_threads> [--write]
-```
-
-* `--ndiv <N>`: subdivision level
-* `--threads <N>`: number of CPU threads
-* `--write`: writes output to `output/` as `.txt` and `.vtk`
+- Add formal test cases using `CTest`.
+- Benchmark OpenMP performance for higher subdivisions.
+- Explore reintroducing GPU parallelism on a separate branch if needed.
 
 ---
 
-## 📊 Benchmarking
+## 📞 Contact
 
-Run the benchmarking script from the **project root**:
-
-```bash
-python tests/plot_speedup.py
-```
-
-This:
-
-* Compiles CPU and GPU versions
-* Runs each with `Ndiv = 1` to `6`
-* Stores logs in `tests/`
-* Generates plots:
-
-  * `timing_comparison.png`
-  * `speedup.png`
-
----
-
-## 📆 Dependencies
-
-* CMake ≥ 3.10
-* CUDA Toolkit (for GPU build)
-* Python ≥ 3.8 with:
-
-  * `matplotlib`
-  * `numpy`
-
----
-
-## 📈 Sample Output
-
-![timing\_comparison.png](tests/timing_comparison.png)
-![speedup.png](tests/speedup.png)
-
----
-
-## 📝 License
-
-MIT License (you may modify this as needed).
+Maintained by [debasishuiuc](https://github.com/debasishuiuc).
