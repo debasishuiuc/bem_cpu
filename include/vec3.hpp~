@@ -1,0 +1,101 @@
+// vec3.hpp
+
+#pragma once
+
+#if defined(__CUDACC__)
+#define HD __host__ __device__
+#else
+#define HD
+#endif
+
+#include <cmath>
+
+struct Vec3 {
+  double x, y, z;
+
+  // Constructors
+  HD Vec3() : x(0.0), y(0.0), z(0.0) {}
+  HD Vec3(double x_, double y_, double z_) : x(x_), y(y_), z(z_) {}
+
+  // Arithmetic operators
+  HD Vec3 operator+(const Vec3& rhs) const {
+    return Vec3(x + rhs.x, y + rhs.y, z + rhs.z);
+  }
+
+  HD Vec3& operator+=(const Vec3& rhs) {
+    x += rhs.x; y += rhs.y; z += rhs.z;
+    return *this;
+  }
+
+  HD Vec3 operator-(const Vec3& rhs) const {
+    return Vec3(x - rhs.x, y - rhs.y, z - rhs.z);
+  }
+
+  HD Vec3& operator-=(const Vec3& rhs) {
+    x -= rhs.x; y -= rhs.y; z -= rhs.z;
+    return *this;
+  }
+
+  HD Vec3 operator*(double scalar) const {
+    return Vec3(x * scalar, y * scalar, z * scalar);
+  }
+
+  HD Vec3 operator/(double scalar) const {
+    return Vec3(x / scalar, y / scalar, z / scalar);
+  }
+
+  HD Vec3& operator*=(double scalar) {
+    x *= scalar; y *= scalar; z *= scalar;
+    return *this;
+  }
+
+  HD Vec3& operator/=(double scalar) {
+    x /= scalar; y /= scalar; z /= scalar;
+    return *this;
+  }
+
+  // Dot product
+  HD double dot(const Vec3& rhs) const {
+    return x * rhs.x + y * rhs.y + z * rhs.z;
+  }
+
+  // Cross product
+  HD Vec3 cross(const Vec3& rhs) const {
+    return Vec3(
+		y * rhs.z - z * rhs.y,
+		z * rhs.x - x * rhs.z,
+		x * rhs.y - y * rhs.x
+		);
+  }
+
+  // Norm (length)
+  HD double norm() const {
+    return sqrt(x * x + y * y + z * z);
+  }
+
+  // Return a normalized copy
+  HD Vec3 normalized() const {
+    double n = norm();
+    return (n > 1e-14) ? (*this / n) : Vec3(0, 0, 0);
+  }
+
+  // Accessors
+  HD double& operator[](int i) { return *(&x + i); }
+  HD const double& operator[](int i) const { return *(&x + i); }
+
+  // Named accessors
+  HD double& x_() { return x; }
+  HD double& y_() { return y; }
+  HD double& z_() { return z; }
+
+  HD const double& x_() const { return x; }
+  HD const double& y_() const { return y; }
+  HD const double& z_() const { return z; }
+};
+
+// ✅ Global free function: double * Vec3
+HD inline Vec3 operator*(double a, const Vec3& v) {
+  return Vec3(a * v.x, a * v.y, a * v.z);
+}
+
+#undef HD

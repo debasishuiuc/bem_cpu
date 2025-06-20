@@ -1,0 +1,1 @@
+Ndiv=8, Mode=CUDA, MeshTime=5.308367e-01, GeometryTime=6.877038e-01, Npts=655362, Nelm=1310720, SurfaceArea=-nan, Volume=-nan, Centroid=[-nan -nan -nan]

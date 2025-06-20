@@ -1,0 +1,57 @@
+// geometry_gpu.hpp
+
+#pragma once
+
+#include "mesh_utils.hpp"
+#include <vector>
+#include <array>
+#include <thrust/host_vector.h>
+
+// GPU-friendly version of Geometry struct
+struct GeometryGPU {
+  double area = 0.0;
+  double volume = 0.0;
+  Vec3 centroid = {0.0, 0.0, 0.0};  // GPU vector type
+
+  std::vector<double> elemArea;
+  std::vector<Vec3> elemCentroid;
+  std::vector<Vec3> elemNormals;   // vnc
+  std::vector<Vec3> nodeNormals;   // vna
+  std::vector<double> elemCurvature; // crvmel
+
+  double Mmat[9] = {0.0};  // Row-major 3×3 matrix
+};
+
+// Optional utility function to copy GPU output into CPU-compatible Geometry struct
+#include "geometry.hpp"  // for Geometry definition (uses Eigen)
+
+inline void copy_geometry_gpu_to_cpu(const GeometryGPU& gpu, Geometry& cpu) {
+  cpu.area = gpu.area;
+  cpu.volume = gpu.volume;
+  cpu.centroid = Eigen::Vector3d(gpu.centroid.x, gpu.centroid.y, gpu.centroid.z);
+
+  const int Nelm = gpu.elemArea.size();
+  const int Npts = gpu.nodeNormals.size();
+  cpu.elemArea = gpu.elemArea;
+  cpu.elemCentroid.resize(Nelm);
+  cpu.elemNormals.resize(Nelm);
+  cpu.elemCurvature = gpu.elemCurvature;
+  cpu.nodeNormals.resize(Npts);
+
+  for (int i = 0; i < Nelm; ++i) {
+    cpu.elemCentroid[i] = Eigen::Vector3d(gpu.elemCentroid[i].x, gpu.elemCentroid[i].y, gpu.elemCentroid[i].z);
+    cpu.elemNormals[i]  = Eigen::Vector3d(gpu.elemNormals[i].x,  gpu.elemNormals[i].y,  gpu.elemNormals[i].z);
+  }
+  for (int i = 0; i < Npts; ++i) {
+    cpu.nodeNormals[i] = Eigen::Vector3d(gpu.nodeNormals[i].x, gpu.nodeNormals[i].y, gpu.nodeNormals[i].z);
+  }
+
+  cpu.Mmat = Eigen::Map<const Eigen::Matrix<double, 3, 3, Eigen::RowMajor>>(gpu.Mmat);
+}
+
+
+inline void compute_geometry_gpu(const Mesh& mesh, Geometry& geom, int Nq) {
+  GeometryGPU gpu_geom;
+  launch_geometry_kernels(mesh, gpu_geom, Nq);
+  copy_geometry_gpu_to_cpu(gpu_geom, geom);
+}

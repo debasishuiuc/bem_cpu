@@ -1,0 +1,51 @@
+#!/bin/bash
+
+# === Settings ===
+MAX_NDIV=6
+CPU_THREADS=12
+EXEC=./bin/meshgen
+TEST_DIR=./tests
+LOG_CPU=$TEST_DIR/log_cpu.txt
+LOG_GPU=$TEST_DIR/log_gpu.txt
+BUILD_DIR=build
+
+# === Ensure tests/ directory exists ===
+if [ ! -d "$TEST_DIR" ]; then
+  echo "Creating tests/ directory..."
+  mkdir "$TEST_DIR"
+fi
+
+# === Cleanup logs ===
+rm -f "$LOG_CPU" "$LOG_GPU"
+
+# === CPU Version ===
+echo "Compiling CPU version..."
+if [ -d "$BUILD_DIR" ]; then
+  echo "Removing existing build directory..."
+  rm -rf "$BUILD_DIR"
+fi
+cmake -DUSE_CUDA=OFF -B "$BUILD_DIR" -S . > /dev/null
+cmake --build "$BUILD_DIR" --parallel > /dev/null
+
+echo "Benchmarking CPU version..."
+for ndiv in $(seq 1 "$MAX_NDIV"); do
+    echo "CPU: Ndiv = $ndiv"
+    "$EXEC" --ndiv "$ndiv" --threads "$CPU_THREADS" >> "$LOG_CPU"
+done
+
+# === GPU Version ===
+echo "Compiling GPU version..."
+if [ -d "$BUILD_DIR" ]; then
+  echo "Removing existing build directory..."
+  rm -rf "$BUILD_DIR"
+fi
+cmake -DUSE_CUDA=ON -B "$BUILD_DIR" -S . > /dev/null
+cmake --build "$BUILD_DIR" --parallel > /dev/null
+
+echo "Benchmarking GPU version..."
+for ndiv in $(seq 1 "$MAX_NDIV"); do
+    echo "GPU: Ndiv = $ndiv"
+    "$EXEC" --ndiv "$ndiv" --threads "$CPU_THREADS" >> "$LOG_GPU"
+done
+
+echo "Benchmark complete. Logs saved to $LOG_CPU and $LOG_GPU."

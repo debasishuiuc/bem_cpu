@@ -1,0 +1,9 @@
+// write_txt.hpp
+
+#pragma once
+#include "trgl6_icos.hpp"
+#include "geometry.hpp"  // Required for Geometry
+#include <string>
+
+// Writes mesh point and connectivity data to plain text
+void write_txt(const Mesh& mesh, const Geometry& geom, const std::string& outdir);

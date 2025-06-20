@@ -1,0 +1,65 @@
+import subprocess
+import matplotlib.pyplot as plt
+import numpy as np
+import re
+import os
+from collections import defaultdict
+
+# === Step 1: Run bash script ===
+bash_script = "./benchmark_cpu_gpu.sh"
+print(f"Running benchmark: {bash_script}")
+subprocess.run(["bash", bash_script], check=True)
+
+# === Step 2: Parser for updated log format ===
+def parse_log(filename):
+    data = defaultdict(list)
+    current_ndiv = None
+
+    with open(filename, "r") as f:
+        for line in f:
+            # Detect Ndiv from log
+            if "Running mesh generation with Ndiv" in line:
+                match = re.search(r"Ndiv\s*=\s*(\d+)", line)
+                if match:
+                    current_ndiv = int(match.group(1))
+            # Detect timing
+            elif "Mesh generation took" in line and current_ndiv is not None:
+                match = re.search(r"took\s+([\d\.eE+-]+)", line)
+                if match:
+                    time = float(match.group(1))
+                    data[current_ndiv].append(time)
+
+    return data
+
+# === Step 3: Parse both logs ===
+cpu_times = parse_log("log_cpu.txt")
+gpu_times = parse_log("log_gpu.txt")
+
+ndivs = sorted(set(cpu_times.keys()) & set(gpu_times.keys()))
+cpu_avg = [np.mean(cpu_times[n]) for n in ndivs]
+gpu_avg = [np.mean(gpu_times[n]) for n in ndivs]
+speedup = [c / g for c, g in zip(cpu_avg, gpu_avg)]
+
+# === Step 4: Plot timing comparison ===
+plt.figure()
+plt.plot(ndivs, cpu_avg, marker='o', label="CPU (12 threads)")
+plt.plot(ndivs, gpu_avg, marker='s', label="GPU")
+plt.xlabel("Subdivision Level (Ndiv)")
+plt.ylabel("Time (s)")
+plt.title("Mesh Generation Time: CPU vs GPU")
+plt.legend()
+plt.grid(True)
+plt.savefig("timing_comparison.png")
+print("✅ Saved: timing_comparison.png")
+plt.close()
+
+# === Step 5: Plot speedup ===
+plt.figure()
+plt.plot(ndivs, speedup, marker='^', color='green')
+plt.xlabel("Subdivision Level (Ndiv)")
+plt.ylabel("Speedup (CPU time / GPU time)")
+plt.title("GPU Speedup over CPU")
+plt.grid(True)
+plt.savefig("speedup.png")
+print("✅ Saved: speedup.png")
+plt.close()

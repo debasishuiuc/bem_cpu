@@ -1,0 +1,54 @@
+#include "connectivity_tests.hpp"
+#include <iostream>
+
+bool check_neighbor_symmetry(const std::vector<std::array<int,3>>& nbe) {
+  bool ok = true;
+  for (int i = 0; i < (int)nbe.size(); ++i) {
+    for (int j = 0; j < 3; ++j) {
+      int nbr = nbe[i][j];
+      if (nbr < 0 || nbr >= (int)nbe.size()) continue;
+      bool found = false;
+      for (int k = 0; k < 3; ++k)
+        if (nbe[nbr][k] == i) found = true;
+      if (!found) {
+        std::cerr << "Asymmetry: triangle " << i << " lists " << nbr << " as neighbor, but not vice versa\n";
+        ok = false;
+      }
+    }
+  }
+  return ok;
+}
+
+bool check_no_boundary_edges(const std::vector<std::array<int,3>>& nbe) {
+  int count = 0;
+  for (const auto& tri : nbe)
+    for (int nbr : tri)
+      if (nbr == -1) ++count;
+  if (count > 0)
+    std::cerr << "Warning: Found " << count << " boundary edges (unexpected on closed surface)\n";
+  return count == 0;
+}
+
+bool check_node_valence(const std::vector<std::vector<int>>& ne_fallback, int min_expected, int max_expected) {
+  bool ok = true;
+  for (int i = 0; i < (int)ne_fallback.size(); ++i) {
+    int valence = ne_fallback[i].size();
+    if (valence < min_expected || valence > max_expected) {
+      std::cerr << "Node " << i << " has valence " << valence << " (outside expected range)\n";
+      ok = false;
+    }
+  }
+  return ok;
+}
+
+void run_connectivity_tests(const Mesh& mesh) {
+  bool pass = true;
+  pass &= check_no_boundary_edges(mesh.nbe);
+  pass &= check_neighbor_symmetry(mesh.nbe);
+  pass &= check_node_valence(mesh.ne_fallback);
+
+  if (pass)
+    std::cout << "[✓] Connectivity tests passed.\n";
+  else
+    std::cerr << "[✗] One or more connectivity tests failed.\n";
+}

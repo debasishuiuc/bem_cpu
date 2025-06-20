@@ -1,0 +1,15 @@
+// geometry_utility.hpp
+
+#pragma once
+#include "vec3.hpp"
+
+void interp_p(
+	      const Vec3* nodes,
+	      double al, double be, double ga,
+	      double xi, double eta,
+	      Vec3& pos,
+	      Vec3& DxDxi, Vec3& DxDet,
+	      Vec3& vn,
+	      double& hxi, double& het, double& hs,
+	      int Ichoose
+	      );

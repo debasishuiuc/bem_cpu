@@ -1,0 +1,8 @@
+// write_vtk.hpp
+
+#pragma once
+#include "geometry.hpp"
+#include "trgl6_icos.hpp"
+#include <string>
+
+void write_vtk(const Mesh& mesh, const Geometry& geom, const std::string& filename);

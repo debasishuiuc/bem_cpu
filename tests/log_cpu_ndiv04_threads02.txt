@@ -1,0 +1,1 @@
+Ndiv=4, Mode=OpenMP, Threads=2, MeshTime=9.718738e-03, GeometryTime=3.922617e-03, Npts=10242, Nelm=5120, SurfaceArea=12.566366, Volume=-4.188788, Centroid=[3.533951e-17 1.766975e-16 -1.722801e-16]

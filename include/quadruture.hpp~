@@ -1,0 +1,13 @@
+// quadrature.hpp
+
+
+#pragma once
+#include <vector>
+
+struct QuadratureData {
+  std::vector<double> xiq;
+  std::vector<double> etq;
+  std::vector<double> wwq;
+};
+
+QuadratureData get_triangle_quadrature(int order);
