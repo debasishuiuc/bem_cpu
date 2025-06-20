@@ -6,53 +6,45 @@
 #include <algorithm>
 #include <unordered_map>
 
-// Vec3 comparison helpers (can optionally be factored into a common utility)
-extern bool compare_vec3(const Vec3& a, const Vec3& b);
-extern bool equal_vec3(const Vec3& a, const Vec3& b);
 
-// Deduplicate point list with mapping
-void deduplicate_points(const std::vector<Vec3>& all_points,
-                        std::vector<Vec3>& unique_points,
-                        std::unordered_map<Vec3, int, Vec3Hash, Vec3Equal>& point_to_id) {
-  unique_points = all_points;
-  std::sort(unique_points.begin(), unique_points.end(), compare_vec3);
-
-  unique_points.erase(std::unique(unique_points.begin(), unique_points.end(), equal_vec3),
-                      unique_points.end());
-
-#pragma omp parallel
-  {
-    std::unordered_map<Vec3, int, Vec3Hash, Vec3Equal> local_map;
-
-#pragma omp for nowait
-    for (int i = 0; i < static_cast<int>(all_points.size()); ++i) {
-      const Vec3& p = all_points[i];
-      auto it = std::lower_bound(unique_points.begin(), unique_points.end(), p, compare_vec3);
-      if (it != unique_points.end() && equal_vec3(*it, p)) {
-        int idx = std::distance(unique_points.begin(), it);
-        local_map[p] = idx;
-      }
-    }
-
-#pragma omp critical
-    for (const auto& kv : local_map)
-      point_to_id[kv.first] = kv.second;
-  }
-}
-
-// Deduplicate and remap mesh node indices
 void deduplicate_points(Mesh& mesh) {
-  std::vector<Vec3> unique_points;
+  const auto& all_points = mesh.p;
+
+  // Step 1: Deduplicate points
+  std::vector<Vec3> unique_points = all_points;
+  std::sort(unique_points.begin(), unique_points.end(), compare_vec3);
+  unique_points.erase(
+		      std::unique(unique_points.begin(), unique_points.end(), equal_vec3),
+		      unique_points.end());
+
+  // Step 2: Build mapping from old point to new index
   std::unordered_map<Vec3, int, Vec3Hash, Vec3Equal> point_to_id;
+  for (int i = 0; i < static_cast<int>(unique_points.size()); ++i) {
+    point_to_id[unique_points[i]] = i;
+  }
 
-  deduplicate_points(mesh.p, unique_points, point_to_id);
-
-  for (auto& tri : mesh.n) {
-    for (int& node : tri) {
-      node = point_to_id[mesh.p[node]];
+  // Step 3: Create remap vector (old index → new index)
+  std::vector<int> remap_indices(mesh.p.size(), -1);
+#pragma omp parallel for
+  for (int i = 0; i < static_cast<int>(mesh.p.size()); ++i) {
+    auto it = point_to_id.find(mesh.p[i]);
+    if (it != point_to_id.end()) {
+      remap_indices[i] = it->second;
+    } else {
+#pragma omp critical
+      std::cerr << "ERROR: Could not find point in deduplication map.\n";
     }
   }
 
+  // Step 4: Remap element connectivity
+#pragma omp parallel for
+  for (int k = 0; k < static_cast<int>(mesh.n.size()); ++k) {
+    for (int i = 0; i < 6; ++i) {
+      mesh.n[k][i] = remap_indices[mesh.n[k][i]];
+    }
+  }
+
+  // Step 5: Update mesh
   mesh.p = std::move(unique_points);
   mesh.Npts = mesh.p.size();
 }

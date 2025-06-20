@@ -57,22 +57,50 @@ int main(int argc, char* argv[]) {
   auto t_mesh_end = Clock::now();
   Duration mesh_time = t_mesh_end - t_mesh_start;
 
-  std::cout << "Points: " << mesh.Npts << ", Elements: " << mesh.Nelm << "\n";
-  std::cout << "Mesh generation took " << mesh_time.count() << " seconds.\n";
-
   auto t_geom_start = Clock::now();
   GeometryAnalyzer analyzer;
   analyzer.compute(mesh, 6);
-  analyzer.print_summary(mesh);
   
   // compute_geometry(mesh, 6); 
   auto t_geom_end = Clock::now();
   Duration geom_time = t_geom_end - t_geom_start;
+  
 
+
+
+  // Print decorated summary
+  std::cout << "\n=== Mesh Statistics ===\n";
+  std::cout << "Subdivision level (Ndiv): " << Ndiv << "\n";
+  std::cout << "Points: " << mesh.Npts << ", Elements: " << mesh.Nelm << "\n";
+
+  std::cout << "\n=== Timing ===\n";
+  std::cout << "Mesh generation took " << mesh_time.count() << " seconds.\n";
   std::cout << "Compute Mesh took " << geom_time.count() << " seconds.\n";
 
+  // Print geometry summary
+  std::cout << "\n=== Geometry Summary ===\n";
+  analyzer.print_summary(mesh, 5); // limit print to first 5 nodes/elements
 
+  analyzer.check_element_quality(mesh, 6);
+  
+  // Mesh integrity check
+  std::cout << "\n=== Mesh Integrity Check ===\n";
+  if (!check_mesh_integrity(mesh)) {
+    std::cerr << "Mesh integrity check FAILED.\n";
+    return 1;
+  } else {
+    std::cout << "Mesh integrity check passed.\n";
+  }
 
+  // Triangle orientation check
+  std::cout << "\n=== Triangle Orientation Check ===\n";
+  if (!check_triangle_orientation_strict(mesh)) {
+    std::cerr << "Orientation check FAILED: Some triangles are not CCW.\n";
+    return 1;
+  } else {
+    std::cout << "All triangles are properly counter-clockwise (CCW).\n";
+  }
+  
   if (!log_path.empty()) {
     std::filesystem::path log_dir = std::filesystem::path(log_path).parent_path();
     if (!log_dir.empty() && !std::filesystem::exists(log_dir)) {
@@ -103,14 +131,6 @@ int main(int argc, char* argv[]) {
     }
   }
 
-  std::cout << "\n=== Geometry Summary ===\n";
-  std::cout << "Surface area  : " << analyzer.totalArea << '\n';
-  std::cout << "Volume        : " << analyzer.totalVolume << '\n';
-  std::cout << "Centroid      : ["
-	    << analyzer.surfaceCentroid[0] << " "
-	    << analyzer.surfaceCentroid[1] << " "
-	    << analyzer.surfaceCentroid[2] << "]\n";
-
 
   std::cout << "Ndiv = " << Ndiv << ", Threads = " << num_threads
             << ", Mesh Time = " << std::scientific << mesh_time.count()
@@ -136,45 +156,41 @@ int main(int argc, char* argv[]) {
 	      << ", Number of crvmel = " << analyzer.elementCurvature.size() << std::endl;
 
     write_vtk(mesh, analyzer, outdir + "mesh.vtk");
-
-
-    write_vtk(mesh, analyzer, outdir + "mesh.vtk");
     
     std::cout << "Mesh written to output/ directory.\n";
   }
 
-  // Print element-to-element connectivity
-  std::cout << "\nElement-to-element connectivity (nbe):\n";
-  for (int i = 0; i < mesh.nbe.size(); ++i) {
-    std::cout << "Element " << i << " neighbors: ";
-    for (int j = 0; j < 3; ++j) {
-      std::cout << mesh.nbe[i][j] << " ";
-    }
-    std::cout << "\n";
-  }
+  // // Print element-to-element connectivity
+  // std::cout << "\nElement-to-element connectivity (nbe):\n";
+  // for (int i = 0; i < mesh.nbe.size(); ++i) {
+  //   std::cout << "Element " << i << " neighbors: ";
+  //   for (int j = 0; j < 3; ++j) {
+  //     std::cout << mesh.nbe[i][j] << " ";
+  //   }
+  //   std::cout << "\n";
+  // }
 
-  // Print node-to-element connectivity
-  std::cout << "\nNode-to-element connectivity (ne):\n";
-  for (int i = 0; i < mesh.ne.size(); ++i) {
-    const auto& row = mesh.ne[i];
-    std::cout << "Node " << i << " elements: ";
-    if (!row.empty()) {
-      for (size_t j = 1; j <= static_cast<size_t>(row[0]); ++j) {
-	std::cout << row[j] << " ";
-      }
-    }
-    std::cout << "\n";
-  }
+  // // Print node-to-element connectivity
+  // std::cout << "\nNode-to-element connectivity (ne):\n";
+  // for (int i = 0; i < mesh.ne.size(); ++i) {
+  //   const auto& row = mesh.ne[i];
+  //   std::cout << "Node " << i << " elements: ";
+  //   if (!row.empty()) {
+  //     for (size_t j = 1; j <= static_cast<size_t>(row[0]); ++j) {
+  // 	std::cout << row[j] << " ";
+  //     }
+  //   }
+  //   std::cout << "\n";
+  // }
 
-  std::cout << "\n6-node triangle connectivity (n):\n";
-  for (int i = 0; i < mesh.Nelm; ++i) {
-    std::cout << "Element " << i << ": ";
-    for (int j = 0; j < 6; ++j) {
-      std::cout << mesh.n[i][j] << " ";
-    }
-    std::cout << "\n";
-  }
-
+  // std::cout << "\n6-node triangle connectivity (n):\n";
+  // for (int i = 0; i < mesh.Nelm; ++i) {
+  //   std::cout << "Element " << i << ": ";
+  //   for (int j = 0; j < 6; ++j) {
+  //     std::cout << mesh.n[i][j] << " ";
+  //   }
+  //   std::cout << "\n";
+  // }
 
  
   return 0;

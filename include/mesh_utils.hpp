@@ -60,14 +60,14 @@ inline void get_element_coords_eigen(const Mesh& mesh, int elem_idx, std::array<
     X_eigen[i] = to_eigen(mesh.p[ni[i]]);
 }
 
-// Check mesh integrity (for debugging)
-void check_mesh_integrity(const Mesh& mesh,
-                          double near_duplicate_tol = 1e-6,
-                          double degenerate_tol = 1e-14);
-
 // Summary print
 inline void print_mesh_summary(const Mesh& mesh, const std::string& label) {
   std::cout << "Mesh generation complete (" << label << ").\n";
   std::cout << "Subdivision level (Ndiv): " << mesh.Ndiv << '\n';
   std::cout << "Points: " << mesh.Npts << ", Elements: " << mesh.Nelm << '\n';
 }
+
+
+bool check_mesh_integrity(const Mesh& mesh);
+  
+bool check_triangle_orientation_strict(const Mesh& mesh, double threshold = 1e-12);

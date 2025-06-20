@@ -29,4 +29,6 @@ public:
 
   // Optional: Print summary
   void print_summary(const Mesh& mesh, int num_print = 5) const;
+
+  void check_element_quality(const Mesh& mesh, int quad_order) const;
 };

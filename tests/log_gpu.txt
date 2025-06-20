@@ -1,4 +1,0 @@
-Ndiv=2, Mode=CUDA, MeshTime=2.479632e-01, GeometryTime=1.039733e-03, Npts=162, Nelm=320, SurfaceArea=-nan, Volume=-nan, Centroid=[-nan -nan -nan]
-Ndiv=4, Mode=CUDA, MeshTime=1.874631e-01, GeometryTime=3.166373e-03, Npts=2562, Nelm=5120, SurfaceArea=-nan, Volume=-nan, Centroid=[-nan -nan -nan]
-Ndiv=6, Mode=CUDA, MeshTime=2.219451e-01, GeometryTime=4.586119e-02, Npts=40962, Nelm=81920, SurfaceArea=-nan, Volume=-nan, Centroid=[-nan -nan -nan]
-Ndiv=8, Mode=CUDA, MeshTime=5.308367e-01, GeometryTime=6.877038e-01, Npts=655362, Nelm=1310720, SurfaceArea=-nan, Volume=-nan, Centroid=[-nan -nan -nan]

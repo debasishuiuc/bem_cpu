@@ -19,5 +19,3 @@ struct Geometry {
 
 
 void compute_geometry(const Mesh& mesh, int quad_order);
-
-// void check_element_orientations(const Mesh& mesh);
