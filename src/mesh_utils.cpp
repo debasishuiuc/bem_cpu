@@ -12,20 +12,6 @@
 #include <limits>
 #include <set>
 
-// Vec3 comparison helpers
-bool compare_vec3(const Vec3& a, const Vec3& b) {
-  for (int i = 0; i < 3; ++i) {
-    if (fabs(a[i] - b[i]) > 1e-12) return a[i] < b[i];
-  }
-  return false;
-}
-
-bool equal_vec3(const Vec3& a, const Vec3& b) {
-  return fabs(a[0] - b[0]) < 1e-12 &&
-    fabs(a[1] - b[1]) < 1e-12 &&
-    fabs(a[2] - b[2]) < 1e-12;
-}
-
 // Collect unique edges from triangle list
 void collect_edges(const std::vector<std::array<int, 3>>& triangles,
                    std::vector<Edge>& edges) {
@@ -44,14 +30,6 @@ void collect_edges(const std::vector<std::array<int, 3>>& triangles,
     edges.push_back(kv.first);
   }
 }
-
-// Euclidean distance between Vec3s
-inline double dist(const Vec3& a, const Vec3& b) {
-  return std::sqrt((a[0] - b[0]) * (a[0] - b[0]) +
-                   (a[1] - b[1]) * (a[1] - b[1]) +
-                   (a[2] - b[2]) * (a[2] - b[2]));
-}
-
 
 bool check_mesh_integrity(const Mesh& mesh) {
   bool all_good = true;

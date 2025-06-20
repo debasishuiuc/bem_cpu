@@ -4,6 +4,7 @@
 
 #include "vec3.hpp"
 #include "mesh_utils.hpp"
+#include "quadrature.hpp"
 #include <vector>
 #include <Eigen/Dense>
 
@@ -31,4 +32,15 @@ public:
   void print_summary(const Mesh& mesh, int num_print = 5) const;
 
   void check_element_quality(const Mesh& mesh, int quad_order) const;
+
+
+private:
+  void initialize_containers(const Mesh& mesh, int mint);
+  void compute_element_geometry(const Mesh& mesh, const QuadratureData& quad, int mint);
+  void average_node_normals();
+  void compute_node_curvature(const Mesh& mesh);
+  void compute_moment_matrix(const Mesh& mesh, const QuadratureData& quad, int mint);
+
+  
+  std::vector<int> nodeContribCount;  // ✅ Add this line
 };

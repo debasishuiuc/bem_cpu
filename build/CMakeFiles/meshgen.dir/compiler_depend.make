@@ -6,6 +6,7 @@ CMakeFiles/meshgen.dir/main/main.cpp.o: /home/debasish/Desktop/research/spinning
   /home/debasish/Desktop/research/spinningcoin/bem_cpu/include/deduplicate.hpp \
   /home/debasish/Desktop/research/spinningcoin/bem_cpu/include/geometry_analyzer.hpp \
   /home/debasish/Desktop/research/spinningcoin/bem_cpu/include/mesh_utils.hpp \
+  /home/debasish/Desktop/research/spinningcoin/bem_cpu/include/quadrature.hpp \
   /home/debasish/Desktop/research/spinningcoin/bem_cpu/include/trgl6_icos.hpp \
   /home/debasish/Desktop/research/spinningcoin/bem_cpu/include/vec3.hpp \
   /home/debasish/Desktop/research/spinningcoin/bem_cpu/include/write_txt.hpp \
@@ -544,207 +545,15 @@ CMakeFiles/meshgen.dir/src/connectivity.cpp.o: /home/debasish/Desktop/research/s
   /home/debasish/Desktop/research/spinningcoin/bem_cpu/include/mesh_utils.hpp \
   /home/debasish/Desktop/research/spinningcoin/bem_cpu/include/trgl6_icos.hpp \
   /home/debasish/Desktop/research/spinningcoin/bem_cpu/include/vec3.hpp \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/Cholesky \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/Core \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/Dense \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/Eigenvalues \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/Geometry \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/Householder \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/Jacobi \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/LU \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/QR \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/SVD \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Cholesky/LDLT.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Cholesky/LLT.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/ArrayCwiseBinaryOps.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/ArrayCwiseUnaryOps.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/BlockMethods.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/CommonCwiseBinaryOps.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/CommonCwiseUnaryOps.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/IndexedViewMethods.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/ReshapedMethods.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/ArithmeticSequence.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Array.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/ArrayBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/ArrayWrapper.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Assign.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/AssignEvaluator.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/BandMatrix.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Block.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/BooleanRedux.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/CommaInitializer.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/ConditionEstimator.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/CoreEvaluators.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/CoreIterators.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/CwiseBinaryOp.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/CwiseNullaryOp.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/CwiseTernaryOp.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/CwiseUnaryOp.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/CwiseUnaryView.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/DenseBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/DenseCoeffsBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/DenseStorage.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Diagonal.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/DiagonalMatrix.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/DiagonalProduct.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Dot.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/EigenBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Fuzzy.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/GeneralProduct.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/GenericPacketMath.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/GlobalFunctions.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/IO.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/IndexedView.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Inverse.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Map.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/MapBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/MathFunctions.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/MathFunctionsImpl.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Matrix.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/MatrixBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/NestByValue.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/NoAlias.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/NumTraits.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/PartialReduxEvaluator.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/PermutationMatrix.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/PlainObjectBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Product.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/ProductEvaluators.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Random.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Redux.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Ref.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Replicate.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Reshaped.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/ReturnByValue.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Reverse.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Select.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/SelfAdjointView.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/SelfCwiseBinaryOp.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Solve.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/SolveTriangular.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/SolverBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/StableNorm.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/StlIterators.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Stride.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Swap.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Transpose.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Transpositions.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/TriangularMatrix.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/VectorBlock.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/VectorwiseOp.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Visitor.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/Default/BFloat16.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/Default/ConjHelper.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/Default/Half.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/Default/Settings.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/Default/TypeCasting.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/SSE/Complex.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/SSE/MathFunctions.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/SSE/PacketMath.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/SSE/TypeCasting.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/functors/AssignmentFunctors.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/functors/BinaryFunctors.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/functors/NullaryFunctors.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/functors/StlFunctors.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/functors/TernaryFunctors.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/functors/UnaryFunctors.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/GeneralBlockPanelKernel.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/GeneralMatrixMatrix.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/GeneralMatrixVector.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/Parallelizer.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/SelfadjointMatrixMatrix.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/SelfadjointMatrixVector.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/SelfadjointProduct.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/SelfadjointRank2Update.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/TriangularMatrixMatrix.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/TriangularMatrixVector.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/TriangularSolverMatrix.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/TriangularSolverVector.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/BlasUtil.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/ConfigureVectorization.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/Constants.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/DisableStupidWarnings.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/ForwardDeclarations.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/IndexedViewHelper.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/IntegralConstant.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/MKL_support.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/Macros.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/Memory.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/Meta.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/ReenableStupidWarnings.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/ReshapedHelper.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/StaticAssert.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/SymbolicIndex.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/XprHelper.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/ComplexSchur.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/HessenbergDecomposition.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/RealQZ.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/RealSchur.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/Tridiagonalization.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/ComplexEigenSolver.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/ComplexSchur.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/EigenSolver.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/HessenbergDecomposition.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/RealQZ.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/RealSchur.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/Tridiagonalization.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/AlignedBox.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/AngleAxis.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/EulerAngles.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/Homogeneous.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/Hyperplane.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/OrthoMethods.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/ParametrizedLine.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/Quaternion.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/Rotation2D.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/RotationBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/Scaling.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/Transform.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/Translation.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/Umeyama.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/arch/Geometry_SIMD.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Householder/BlockHouseholder.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Householder/Householder.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Householder/HouseholderSequence.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Jacobi/Jacobi.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/LU/Determinant.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/LU/FullPivLU.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/LU/InverseImpl.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/LU/PartialPivLU.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/LU/arch/InverseSize4.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/QR/ColPivHouseholderQR.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/QR/CompleteOrthogonalDecomposition.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/QR/FullPivHouseholderQR.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/QR/HouseholderQR.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/SVD/BDCSVD.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/SVD/JacobiSVD.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/SVD/SVDBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/SVD/UpperBidiagonalization.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/misc/Image.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/misc/Kernel.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/misc/RealSvd2x2.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
-  /usr/include/assert.h \
   /usr/include/c++/11/algorithm \
   /usr/include/c++/11/array \
-  /usr/include/c++/11/atomic \
   /usr/include/c++/11/backward/binders.h \
   /usr/include/c++/11/bits/algorithmfwd.h \
   /usr/include/c++/11/bits/alloc_traits.h \
   /usr/include/c++/11/bits/allocator.h \
-  /usr/include/c++/11/bits/atomic_base.h \
-  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
   /usr/include/c++/11/bits/basic_ios.h \
   /usr/include/c++/11/bits/basic_ios.tcc \
   /usr/include/c++/11/bits/basic_string.h \
@@ -786,7 +595,6 @@ CMakeFiles/meshgen.dir/src/connectivity.cpp.o: /home/debasish/Desktop/research/s
   /usr/include/c++/11/bits/range_access.h \
   /usr/include/c++/11/bits/refwrap.h \
   /usr/include/c++/11/bits/specfun.h \
-  /usr/include/c++/11/bits/sstream.tcc \
   /usr/include/c++/11/bits/std_abs.h \
   /usr/include/c++/11/bits/std_function.h \
   /usr/include/c++/11/bits/stl_algo.h \
@@ -817,18 +625,13 @@ CMakeFiles/meshgen.dir/src/connectivity.cpp.o: /home/debasish/Desktop/research/s
   /usr/include/c++/11/bits/unordered_map.h \
   /usr/include/c++/11/bits/uses_allocator.h \
   /usr/include/c++/11/bits/vector.tcc \
-  /usr/include/c++/11/cassert \
   /usr/include/c++/11/cctype \
   /usr/include/c++/11/cerrno \
-  /usr/include/c++/11/climits \
   /usr/include/c++/11/clocale \
   /usr/include/c++/11/cmath \
-  /usr/include/c++/11/complex \
-  /usr/include/c++/11/cstddef \
   /usr/include/c++/11/cstdint \
   /usr/include/c++/11/cstdio \
   /usr/include/c++/11/cstdlib \
-  /usr/include/c++/11/cstring \
   /usr/include/c++/11/cwchar \
   /usr/include/c++/11/cwctype \
   /usr/include/c++/11/debug/assertions.h \
@@ -894,9 +697,7 @@ CMakeFiles/meshgen.dir/src/connectivity.cpp.o: /home/debasish/Desktop/research/s
   /usr/include/c++/11/pstl/pstl_config.h \
   /usr/include/c++/11/queue \
   /usr/include/c++/11/set \
-  /usr/include/c++/11/sstream \
   /usr/include/c++/11/stdexcept \
-  /usr/include/c++/11/stdlib.h \
   /usr/include/c++/11/streambuf \
   /usr/include/c++/11/string \
   /usr/include/c++/11/string_view \
@@ -930,9 +731,7 @@ CMakeFiles/meshgen.dir/src/connectivity.cpp.o: /home/debasish/Desktop/research/s
   /usr/include/errno.h \
   /usr/include/features-time64.h \
   /usr/include/features.h \
-  /usr/include/limits.h \
   /usr/include/linux/errno.h \
-  /usr/include/linux/limits.h \
   /usr/include/locale.h \
   /usr/include/math.h \
   /usr/include/pthread.h \
@@ -941,8 +740,6 @@ CMakeFiles/meshgen.dir/src/connectivity.cpp.o: /home/debasish/Desktop/research/s
   /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/wchar.h \
   /usr/include/wctype.h \
@@ -961,15 +758,12 @@ CMakeFiles/meshgen.dir/src/connectivity.cpp.o: /home/debasish/Desktop/research/s
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
   /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
   /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/math-vector.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
   /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
@@ -1014,13 +808,11 @@ CMakeFiles/meshgen.dir/src/connectivity.cpp.o: /home/debasish/Desktop/research/s
   /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -1038,222 +830,24 @@ CMakeFiles/meshgen.dir/src/connectivity.cpp.o: /home/debasish/Desktop/research/s
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
   /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/emmintrin.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/mm_malloc.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/mmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/omp.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/xmmintrin.h
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h
 
 CMakeFiles/meshgen.dir/src/deduplicate.cpp.o: /home/debasish/Desktop/research/spinningcoin/bem_cpu/src/deduplicate.cpp \
   /home/debasish/Desktop/research/spinningcoin/bem_cpu/include/mesh_utils.hpp \
   /home/debasish/Desktop/research/spinningcoin/bem_cpu/include/trgl6_icos.hpp \
   /home/debasish/Desktop/research/spinningcoin/bem_cpu/include/vec3.hpp \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/Cholesky \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/Core \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/Dense \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/Eigenvalues \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/Geometry \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/Householder \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/Jacobi \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/LU \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/QR \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/SVD \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Cholesky/LDLT.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Cholesky/LLT.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/ArrayCwiseBinaryOps.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/ArrayCwiseUnaryOps.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/BlockMethods.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/CommonCwiseBinaryOps.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/CommonCwiseUnaryOps.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/IndexedViewMethods.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/ReshapedMethods.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/ArithmeticSequence.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Array.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/ArrayBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/ArrayWrapper.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Assign.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/AssignEvaluator.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/BandMatrix.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Block.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/BooleanRedux.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/CommaInitializer.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/ConditionEstimator.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/CoreEvaluators.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/CoreIterators.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/CwiseBinaryOp.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/CwiseNullaryOp.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/CwiseTernaryOp.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/CwiseUnaryOp.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/CwiseUnaryView.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/DenseBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/DenseCoeffsBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/DenseStorage.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Diagonal.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/DiagonalMatrix.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/DiagonalProduct.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Dot.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/EigenBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Fuzzy.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/GeneralProduct.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/GenericPacketMath.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/GlobalFunctions.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/IO.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/IndexedView.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Inverse.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Map.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/MapBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/MathFunctions.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/MathFunctionsImpl.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Matrix.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/MatrixBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/NestByValue.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/NoAlias.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/NumTraits.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/PartialReduxEvaluator.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/PermutationMatrix.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/PlainObjectBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Product.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/ProductEvaluators.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Random.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Redux.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Ref.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Replicate.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Reshaped.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/ReturnByValue.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Reverse.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Select.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/SelfAdjointView.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/SelfCwiseBinaryOp.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Solve.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/SolveTriangular.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/SolverBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/StableNorm.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/StlIterators.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Stride.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Swap.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Transpose.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Transpositions.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/TriangularMatrix.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/VectorBlock.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/VectorwiseOp.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Visitor.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/Default/BFloat16.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/Default/ConjHelper.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/Default/Half.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/Default/Settings.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/Default/TypeCasting.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/SSE/Complex.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/SSE/MathFunctions.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/SSE/PacketMath.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/SSE/TypeCasting.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/functors/AssignmentFunctors.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/functors/BinaryFunctors.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/functors/NullaryFunctors.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/functors/StlFunctors.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/functors/TernaryFunctors.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/functors/UnaryFunctors.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/GeneralBlockPanelKernel.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/GeneralMatrixMatrix.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/GeneralMatrixVector.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/Parallelizer.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/SelfadjointMatrixMatrix.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/SelfadjointMatrixVector.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/SelfadjointProduct.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/SelfadjointRank2Update.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/TriangularMatrixMatrix.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/TriangularMatrixVector.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/TriangularSolverMatrix.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/TriangularSolverVector.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/BlasUtil.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/ConfigureVectorization.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/Constants.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/DisableStupidWarnings.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/ForwardDeclarations.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/IndexedViewHelper.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/IntegralConstant.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/MKL_support.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/Macros.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/Memory.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/Meta.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/ReenableStupidWarnings.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/ReshapedHelper.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/StaticAssert.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/SymbolicIndex.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/XprHelper.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/ComplexSchur.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/HessenbergDecomposition.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/RealQZ.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/RealSchur.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/Tridiagonalization.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/ComplexEigenSolver.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/ComplexSchur.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/EigenSolver.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/HessenbergDecomposition.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/RealQZ.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/RealSchur.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/Tridiagonalization.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/AlignedBox.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/AngleAxis.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/EulerAngles.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/Homogeneous.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/Hyperplane.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/OrthoMethods.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/ParametrizedLine.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/Quaternion.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/Rotation2D.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/RotationBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/Scaling.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/Transform.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/Translation.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/Umeyama.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/arch/Geometry_SIMD.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Householder/BlockHouseholder.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Householder/Householder.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Householder/HouseholderSequence.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Jacobi/Jacobi.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/LU/Determinant.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/LU/FullPivLU.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/LU/InverseImpl.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/LU/PartialPivLU.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/LU/arch/InverseSize4.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/QR/ColPivHouseholderQR.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/QR/CompleteOrthogonalDecomposition.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/QR/FullPivHouseholderQR.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/QR/HouseholderQR.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/SVD/BDCSVD.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/SVD/JacobiSVD.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/SVD/SVDBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/SVD/UpperBidiagonalization.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/misc/Image.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/misc/Kernel.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/misc/RealSvd2x2.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
-  /usr/include/assert.h \
   /usr/include/c++/11/algorithm \
   /usr/include/c++/11/array \
-  /usr/include/c++/11/atomic \
   /usr/include/c++/11/backward/binders.h \
   /usr/include/c++/11/bits/algorithmfwd.h \
   /usr/include/c++/11/bits/alloc_traits.h \
   /usr/include/c++/11/bits/allocator.h \
-  /usr/include/c++/11/bits/atomic_base.h \
-  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
   /usr/include/c++/11/bits/basic_ios.h \
   /usr/include/c++/11/bits/basic_ios.tcc \
   /usr/include/c++/11/bits/basic_string.h \
@@ -1295,7 +889,6 @@ CMakeFiles/meshgen.dir/src/deduplicate.cpp.o: /home/debasish/Desktop/research/sp
   /usr/include/c++/11/bits/range_access.h \
   /usr/include/c++/11/bits/refwrap.h \
   /usr/include/c++/11/bits/specfun.h \
-  /usr/include/c++/11/bits/sstream.tcc \
   /usr/include/c++/11/bits/std_abs.h \
   /usr/include/c++/11/bits/std_function.h \
   /usr/include/c++/11/bits/stl_algo.h \
@@ -1323,18 +916,13 @@ CMakeFiles/meshgen.dir/src/deduplicate.cpp.o: /home/debasish/Desktop/research/sp
   /usr/include/c++/11/bits/unordered_map.h \
   /usr/include/c++/11/bits/uses_allocator.h \
   /usr/include/c++/11/bits/vector.tcc \
-  /usr/include/c++/11/cassert \
   /usr/include/c++/11/cctype \
   /usr/include/c++/11/cerrno \
-  /usr/include/c++/11/climits \
   /usr/include/c++/11/clocale \
   /usr/include/c++/11/cmath \
-  /usr/include/c++/11/complex \
-  /usr/include/c++/11/cstddef \
   /usr/include/c++/11/cstdint \
   /usr/include/c++/11/cstdio \
   /usr/include/c++/11/cstdlib \
-  /usr/include/c++/11/cstring \
   /usr/include/c++/11/cwchar \
   /usr/include/c++/11/cwctype \
   /usr/include/c++/11/debug/assertions.h \
@@ -1399,9 +987,7 @@ CMakeFiles/meshgen.dir/src/deduplicate.cpp.o: /home/debasish/Desktop/research/sp
   /usr/include/c++/11/pstl/glue_algorithm_defs.h \
   /usr/include/c++/11/pstl/pstl_config.h \
   /usr/include/c++/11/queue \
-  /usr/include/c++/11/sstream \
   /usr/include/c++/11/stdexcept \
-  /usr/include/c++/11/stdlib.h \
   /usr/include/c++/11/streambuf \
   /usr/include/c++/11/string \
   /usr/include/c++/11/string_view \
@@ -1435,9 +1021,7 @@ CMakeFiles/meshgen.dir/src/deduplicate.cpp.o: /home/debasish/Desktop/research/sp
   /usr/include/errno.h \
   /usr/include/features-time64.h \
   /usr/include/features.h \
-  /usr/include/limits.h \
   /usr/include/linux/errno.h \
-  /usr/include/linux/limits.h \
   /usr/include/locale.h \
   /usr/include/math.h \
   /usr/include/pthread.h \
@@ -1446,8 +1030,6 @@ CMakeFiles/meshgen.dir/src/deduplicate.cpp.o: /home/debasish/Desktop/research/sp
   /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/wchar.h \
   /usr/include/wctype.h \
@@ -1466,15 +1048,12 @@ CMakeFiles/meshgen.dir/src/deduplicate.cpp.o: /home/debasish/Desktop/research/sp
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
   /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
   /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/math-vector.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
   /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
@@ -1519,13 +1098,11 @@ CMakeFiles/meshgen.dir/src/deduplicate.cpp.o: /home/debasish/Desktop/research/sp
   /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -1543,16 +1120,10 @@ CMakeFiles/meshgen.dir/src/deduplicate.cpp.o: /home/debasish/Desktop/research/sp
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
   /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/emmintrin.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/mm_malloc.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/mmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/omp.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/xmmintrin.h
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h
 
 CMakeFiles/meshgen.dir/src/geometry_analyzer.cpp.o: /home/debasish/Desktop/research/spinningcoin/bem_cpu/src/geometry_analyzer.cpp \
   /home/debasish/Desktop/research/spinningcoin/bem_cpu/include/geometry_analyzer.hpp \
@@ -2201,207 +1772,15 @@ CMakeFiles/meshgen.dir/src/mesh_utils.cpp.o: /home/debasish/Desktop/research/spi
   /home/debasish/Desktop/research/spinningcoin/bem_cpu/include/mesh_utils.hpp \
   /home/debasish/Desktop/research/spinningcoin/bem_cpu/include/trgl6_icos.hpp \
   /home/debasish/Desktop/research/spinningcoin/bem_cpu/include/vec3.hpp \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/Cholesky \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/Core \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/Dense \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/Eigenvalues \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/Geometry \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/Householder \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/Jacobi \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/LU \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/QR \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/SVD \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Cholesky/LDLT.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Cholesky/LLT.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/ArrayCwiseBinaryOps.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/ArrayCwiseUnaryOps.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/BlockMethods.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/CommonCwiseBinaryOps.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/CommonCwiseUnaryOps.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/IndexedViewMethods.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/ReshapedMethods.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/ArithmeticSequence.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Array.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/ArrayBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/ArrayWrapper.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Assign.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/AssignEvaluator.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/BandMatrix.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Block.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/BooleanRedux.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/CommaInitializer.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/ConditionEstimator.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/CoreEvaluators.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/CoreIterators.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/CwiseBinaryOp.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/CwiseNullaryOp.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/CwiseTernaryOp.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/CwiseUnaryOp.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/CwiseUnaryView.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/DenseBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/DenseCoeffsBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/DenseStorage.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Diagonal.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/DiagonalMatrix.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/DiagonalProduct.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Dot.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/EigenBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Fuzzy.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/GeneralProduct.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/GenericPacketMath.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/GlobalFunctions.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/IO.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/IndexedView.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Inverse.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Map.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/MapBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/MathFunctions.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/MathFunctionsImpl.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Matrix.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/MatrixBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/NestByValue.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/NoAlias.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/NumTraits.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/PartialReduxEvaluator.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/PermutationMatrix.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/PlainObjectBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Product.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/ProductEvaluators.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Random.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Redux.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Ref.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Replicate.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Reshaped.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/ReturnByValue.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Reverse.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Select.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/SelfAdjointView.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/SelfCwiseBinaryOp.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Solve.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/SolveTriangular.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/SolverBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/StableNorm.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/StlIterators.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Stride.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Swap.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Transpose.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Transpositions.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/TriangularMatrix.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/VectorBlock.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/VectorwiseOp.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Visitor.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/Default/BFloat16.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/Default/ConjHelper.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/Default/Half.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/Default/Settings.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/Default/TypeCasting.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/SSE/Complex.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/SSE/MathFunctions.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/SSE/PacketMath.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/SSE/TypeCasting.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/functors/AssignmentFunctors.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/functors/BinaryFunctors.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/functors/NullaryFunctors.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/functors/StlFunctors.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/functors/TernaryFunctors.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/functors/UnaryFunctors.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/GeneralBlockPanelKernel.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/GeneralMatrixMatrix.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/GeneralMatrixVector.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/Parallelizer.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/SelfadjointMatrixMatrix.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/SelfadjointMatrixVector.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/SelfadjointProduct.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/SelfadjointRank2Update.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/TriangularMatrixMatrix.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/TriangularMatrixVector.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/TriangularSolverMatrix.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/TriangularSolverVector.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/BlasUtil.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/ConfigureVectorization.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/Constants.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/DisableStupidWarnings.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/ForwardDeclarations.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/IndexedViewHelper.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/IntegralConstant.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/MKL_support.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/Macros.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/Memory.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/Meta.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/ReenableStupidWarnings.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/ReshapedHelper.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/StaticAssert.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/SymbolicIndex.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/XprHelper.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/ComplexSchur.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/HessenbergDecomposition.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/RealQZ.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/RealSchur.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/Tridiagonalization.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/ComplexEigenSolver.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/ComplexSchur.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/EigenSolver.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/HessenbergDecomposition.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/RealQZ.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/RealSchur.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/Tridiagonalization.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/AlignedBox.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/AngleAxis.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/EulerAngles.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/Homogeneous.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/Hyperplane.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/OrthoMethods.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/ParametrizedLine.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/Quaternion.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/Rotation2D.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/RotationBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/Scaling.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/Transform.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/Translation.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/Umeyama.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/arch/Geometry_SIMD.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Householder/BlockHouseholder.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Householder/Householder.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Householder/HouseholderSequence.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Jacobi/Jacobi.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/LU/Determinant.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/LU/FullPivLU.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/LU/InverseImpl.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/LU/PartialPivLU.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/LU/arch/InverseSize4.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/QR/ColPivHouseholderQR.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/QR/CompleteOrthogonalDecomposition.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/QR/FullPivHouseholderQR.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/QR/HouseholderQR.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/SVD/BDCSVD.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/SVD/JacobiSVD.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/SVD/SVDBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/SVD/UpperBidiagonalization.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/misc/Image.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/misc/Kernel.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/misc/RealSvd2x2.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
-  /usr/include/assert.h \
   /usr/include/c++/11/algorithm \
   /usr/include/c++/11/array \
-  /usr/include/c++/11/atomic \
   /usr/include/c++/11/backward/binders.h \
   /usr/include/c++/11/bits/algorithmfwd.h \
   /usr/include/c++/11/bits/alloc_traits.h \
   /usr/include/c++/11/bits/allocator.h \
-  /usr/include/c++/11/bits/atomic_base.h \
-  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
   /usr/include/c++/11/bits/basic_ios.h \
   /usr/include/c++/11/bits/basic_ios.tcc \
   /usr/include/c++/11/bits/basic_string.h \
@@ -2443,7 +1822,6 @@ CMakeFiles/meshgen.dir/src/mesh_utils.cpp.o: /home/debasish/Desktop/research/spi
   /usr/include/c++/11/bits/range_access.h \
   /usr/include/c++/11/bits/refwrap.h \
   /usr/include/c++/11/bits/specfun.h \
-  /usr/include/c++/11/bits/sstream.tcc \
   /usr/include/c++/11/bits/std_abs.h \
   /usr/include/c++/11/bits/std_function.h \
   /usr/include/c++/11/bits/stl_algo.h \
@@ -2476,18 +1854,13 @@ CMakeFiles/meshgen.dir/src/mesh_utils.cpp.o: /home/debasish/Desktop/research/spi
   /usr/include/c++/11/bits/unordered_map.h \
   /usr/include/c++/11/bits/uses_allocator.h \
   /usr/include/c++/11/bits/vector.tcc \
-  /usr/include/c++/11/cassert \
   /usr/include/c++/11/cctype \
   /usr/include/c++/11/cerrno \
-  /usr/include/c++/11/climits \
   /usr/include/c++/11/clocale \
   /usr/include/c++/11/cmath \
-  /usr/include/c++/11/complex \
-  /usr/include/c++/11/cstddef \
   /usr/include/c++/11/cstdint \
   /usr/include/c++/11/cstdio \
   /usr/include/c++/11/cstdlib \
-  /usr/include/c++/11/cstring \
   /usr/include/c++/11/cwchar \
   /usr/include/c++/11/cwctype \
   /usr/include/c++/11/debug/assertions.h \
@@ -2554,9 +1927,7 @@ CMakeFiles/meshgen.dir/src/mesh_utils.cpp.o: /home/debasish/Desktop/research/spi
   /usr/include/c++/11/pstl/pstl_config.h \
   /usr/include/c++/11/queue \
   /usr/include/c++/11/set \
-  /usr/include/c++/11/sstream \
   /usr/include/c++/11/stdexcept \
-  /usr/include/c++/11/stdlib.h \
   /usr/include/c++/11/streambuf \
   /usr/include/c++/11/string \
   /usr/include/c++/11/string_view \
@@ -2590,9 +1961,7 @@ CMakeFiles/meshgen.dir/src/mesh_utils.cpp.o: /home/debasish/Desktop/research/spi
   /usr/include/errno.h \
   /usr/include/features-time64.h \
   /usr/include/features.h \
-  /usr/include/limits.h \
   /usr/include/linux/errno.h \
-  /usr/include/linux/limits.h \
   /usr/include/locale.h \
   /usr/include/math.h \
   /usr/include/pthread.h \
@@ -2601,8 +1970,6 @@ CMakeFiles/meshgen.dir/src/mesh_utils.cpp.o: /home/debasish/Desktop/research/spi
   /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/wchar.h \
   /usr/include/wctype.h \
@@ -2621,15 +1988,12 @@ CMakeFiles/meshgen.dir/src/mesh_utils.cpp.o: /home/debasish/Desktop/research/spi
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
   /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
   /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/math-vector.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
   /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
@@ -2674,13 +2038,11 @@ CMakeFiles/meshgen.dir/src/mesh_utils.cpp.o: /home/debasish/Desktop/research/spi
   /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -2698,16 +2060,10 @@ CMakeFiles/meshgen.dir/src/mesh_utils.cpp.o: /home/debasish/Desktop/research/spi
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
   /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/emmintrin.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/mm_malloc.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/mmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/omp.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/xmmintrin.h
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h
 
 CMakeFiles/meshgen.dir/src/quadrature.cpp.o: /home/debasish/Desktop/research/spinningcoin/bem_cpu/src/quadrature.cpp \
   /home/debasish/Desktop/research/spinningcoin/bem_cpu/include/quadrature.hpp \
@@ -2933,207 +2289,15 @@ CMakeFiles/meshgen.dir/src/trgl6_icos.cpp.o: /home/debasish/Desktop/research/spi
   /home/debasish/Desktop/research/spinningcoin/bem_cpu/include/mesh_utils.hpp \
   /home/debasish/Desktop/research/spinningcoin/bem_cpu/include/trgl6_icos.hpp \
   /home/debasish/Desktop/research/spinningcoin/bem_cpu/include/vec3.hpp \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/Cholesky \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/Core \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/Dense \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/Eigenvalues \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/Geometry \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/Householder \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/Jacobi \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/LU \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/QR \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/SVD \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Cholesky/LDLT.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Cholesky/LLT.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/ArrayCwiseBinaryOps.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/ArrayCwiseUnaryOps.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/BlockMethods.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/CommonCwiseBinaryOps.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/CommonCwiseUnaryOps.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/IndexedViewMethods.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/ReshapedMethods.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/ArithmeticSequence.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Array.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/ArrayBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/ArrayWrapper.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Assign.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/AssignEvaluator.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/BandMatrix.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Block.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/BooleanRedux.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/CommaInitializer.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/ConditionEstimator.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/CoreEvaluators.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/CoreIterators.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/CwiseBinaryOp.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/CwiseNullaryOp.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/CwiseTernaryOp.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/CwiseUnaryOp.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/CwiseUnaryView.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/DenseBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/DenseCoeffsBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/DenseStorage.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Diagonal.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/DiagonalMatrix.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/DiagonalProduct.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Dot.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/EigenBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Fuzzy.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/GeneralProduct.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/GenericPacketMath.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/GlobalFunctions.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/IO.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/IndexedView.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Inverse.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Map.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/MapBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/MathFunctions.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/MathFunctionsImpl.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Matrix.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/MatrixBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/NestByValue.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/NoAlias.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/NumTraits.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/PartialReduxEvaluator.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/PermutationMatrix.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/PlainObjectBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Product.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/ProductEvaluators.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Random.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Redux.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Ref.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Replicate.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Reshaped.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/ReturnByValue.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Reverse.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Select.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/SelfAdjointView.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/SelfCwiseBinaryOp.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Solve.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/SolveTriangular.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/SolverBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/StableNorm.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/StlIterators.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Stride.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Swap.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Transpose.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Transpositions.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/TriangularMatrix.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/VectorBlock.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/VectorwiseOp.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Visitor.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/Default/BFloat16.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/Default/ConjHelper.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/Default/Half.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/Default/Settings.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/Default/TypeCasting.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/SSE/Complex.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/SSE/MathFunctions.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/SSE/PacketMath.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/SSE/TypeCasting.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/functors/AssignmentFunctors.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/functors/BinaryFunctors.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/functors/NullaryFunctors.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/functors/StlFunctors.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/functors/TernaryFunctors.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/functors/UnaryFunctors.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/GeneralBlockPanelKernel.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/GeneralMatrixMatrix.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/GeneralMatrixVector.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/Parallelizer.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/SelfadjointMatrixMatrix.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/SelfadjointMatrixVector.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/SelfadjointProduct.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/SelfadjointRank2Update.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/TriangularMatrixMatrix.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/TriangularMatrixVector.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/TriangularSolverMatrix.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/TriangularSolverVector.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/BlasUtil.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/ConfigureVectorization.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/Constants.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/DisableStupidWarnings.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/ForwardDeclarations.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/IndexedViewHelper.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/IntegralConstant.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/MKL_support.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/Macros.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/Memory.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/Meta.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/ReenableStupidWarnings.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/ReshapedHelper.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/StaticAssert.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/SymbolicIndex.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/XprHelper.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/ComplexSchur.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/HessenbergDecomposition.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/RealQZ.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/RealSchur.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/Tridiagonalization.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/ComplexEigenSolver.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/ComplexSchur.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/EigenSolver.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/HessenbergDecomposition.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/RealQZ.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/RealSchur.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/SelfAdjointEigenSolver.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/Tridiagonalization.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/AlignedBox.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/AngleAxis.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/EulerAngles.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/Homogeneous.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/Hyperplane.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/OrthoMethods.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/ParametrizedLine.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/Quaternion.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/Rotation2D.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/RotationBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/Scaling.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/Transform.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/Translation.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/Umeyama.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Geometry/arch/Geometry_SIMD.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Householder/BlockHouseholder.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Householder/Householder.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Householder/HouseholderSequence.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Jacobi/Jacobi.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/LU/Determinant.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/LU/FullPivLU.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/LU/InverseImpl.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/LU/PartialPivLU.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/LU/arch/InverseSize4.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/QR/ColPivHouseholderQR.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/QR/CompleteOrthogonalDecomposition.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/QR/FullPivHouseholderQR.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/QR/HouseholderQR.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/SVD/BDCSVD.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/SVD/JacobiSVD.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/SVD/SVDBase.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/SVD/UpperBidiagonalization.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/misc/Image.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/misc/Kernel.h \
-  /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/misc/RealSvd2x2.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
-  /usr/include/assert.h \
   /usr/include/c++/11/algorithm \
   /usr/include/c++/11/array \
-  /usr/include/c++/11/atomic \
   /usr/include/c++/11/backward/binders.h \
   /usr/include/c++/11/bits/algorithmfwd.h \
   /usr/include/c++/11/bits/alloc_traits.h \
   /usr/include/c++/11/bits/allocator.h \
-  /usr/include/c++/11/bits/atomic_base.h \
-  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
   /usr/include/c++/11/bits/basic_ios.h \
   /usr/include/c++/11/bits/basic_ios.tcc \
   /usr/include/c++/11/bits/basic_string.h \
@@ -3176,7 +2340,6 @@ CMakeFiles/meshgen.dir/src/trgl6_icos.cpp.o: /home/debasish/Desktop/research/spi
   /usr/include/c++/11/bits/range_access.h \
   /usr/include/c++/11/bits/refwrap.h \
   /usr/include/c++/11/bits/specfun.h \
-  /usr/include/c++/11/bits/sstream.tcc \
   /usr/include/c++/11/bits/std_abs.h \
   /usr/include/c++/11/bits/std_function.h \
   /usr/include/c++/11/bits/stl_algo.h \
@@ -3204,19 +2367,14 @@ CMakeFiles/meshgen.dir/src/trgl6_icos.cpp.o: /home/debasish/Desktop/research/spi
   /usr/include/c++/11/bits/unordered_map.h \
   /usr/include/c++/11/bits/uses_allocator.h \
   /usr/include/c++/11/bits/vector.tcc \
-  /usr/include/c++/11/cassert \
   /usr/include/c++/11/cctype \
   /usr/include/c++/11/cerrno \
   /usr/include/c++/11/chrono \
-  /usr/include/c++/11/climits \
   /usr/include/c++/11/clocale \
   /usr/include/c++/11/cmath \
-  /usr/include/c++/11/complex \
-  /usr/include/c++/11/cstddef \
   /usr/include/c++/11/cstdint \
   /usr/include/c++/11/cstdio \
   /usr/include/c++/11/cstdlib \
-  /usr/include/c++/11/cstring \
   /usr/include/c++/11/ctime \
   /usr/include/c++/11/cwchar \
   /usr/include/c++/11/cwctype \
@@ -3283,9 +2441,7 @@ CMakeFiles/meshgen.dir/src/trgl6_icos.cpp.o: /home/debasish/Desktop/research/spi
   /usr/include/c++/11/pstl/pstl_config.h \
   /usr/include/c++/11/queue \
   /usr/include/c++/11/ratio \
-  /usr/include/c++/11/sstream \
   /usr/include/c++/11/stdexcept \
-  /usr/include/c++/11/stdlib.h \
   /usr/include/c++/11/streambuf \
   /usr/include/c++/11/string \
   /usr/include/c++/11/string_view \
@@ -3319,9 +2475,7 @@ CMakeFiles/meshgen.dir/src/trgl6_icos.cpp.o: /home/debasish/Desktop/research/spi
   /usr/include/errno.h \
   /usr/include/features-time64.h \
   /usr/include/features.h \
-  /usr/include/limits.h \
   /usr/include/linux/errno.h \
-  /usr/include/linux/limits.h \
   /usr/include/locale.h \
   /usr/include/math.h \
   /usr/include/pthread.h \
@@ -3330,8 +2484,6 @@ CMakeFiles/meshgen.dir/src/trgl6_icos.cpp.o: /home/debasish/Desktop/research/spi
   /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
-  /usr/include/string.h \
-  /usr/include/strings.h \
   /usr/include/time.h \
   /usr/include/wchar.h \
   /usr/include/wctype.h \
@@ -3350,15 +2502,12 @@ CMakeFiles/meshgen.dir/src/trgl6_icos.cpp.o: /home/debasish/Desktop/research/spi
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
   /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
-  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
   /usr/include/x86_64-linux-gnu/bits/locale.h \
   /usr/include/x86_64-linux-gnu/bits/long-double.h \
   /usr/include/x86_64-linux-gnu/bits/math-vector.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
-  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
   /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
@@ -3403,13 +2552,11 @@ CMakeFiles/meshgen.dir/src/trgl6_icos.cpp.o: /home/debasish/Desktop/research/spi
   /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
-  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
-  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -3427,20 +2574,15 @@ CMakeFiles/meshgen.dir/src/trgl6_icos.cpp.o: /home/debasish/Desktop/research/spi
   /usr/include/x86_64-linux-gnu/sys/select.h \
   /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
   /usr/include/x86_64-linux-gnu/sys/types.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/emmintrin.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/mm_malloc.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/mmintrin.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/omp.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
   /usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
-  /usr/lib/gcc/x86_64-linux-gnu/11/include/xmmintrin.h
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h
 
 CMakeFiles/meshgen.dir/src/write_txt.cpp.o: /home/debasish/Desktop/research/spinningcoin/bem_cpu/src/write_txt.cpp \
   /home/debasish/Desktop/research/spinningcoin/bem_cpu/include/geometry_analyzer.hpp \
   /home/debasish/Desktop/research/spinningcoin/bem_cpu/include/mesh_utils.hpp \
+  /home/debasish/Desktop/research/spinningcoin/bem_cpu/include/quadrature.hpp \
   /home/debasish/Desktop/research/spinningcoin/bem_cpu/include/trgl6_icos.hpp \
   /home/debasish/Desktop/research/spinningcoin/bem_cpu/include/vec3.hpp \
   /home/debasish/Desktop/research/spinningcoin/bem_cpu/include/write_txt.hpp \
@@ -3977,6 +3119,7 @@ CMakeFiles/meshgen.dir/src/write_txt.cpp.o: /home/debasish/Desktop/research/spin
 CMakeFiles/meshgen.dir/src/write_vtk.cpp.o: /home/debasish/Desktop/research/spinningcoin/bem_cpu/src/write_vtk.cpp \
   /home/debasish/Desktop/research/spinningcoin/bem_cpu/include/geometry_analyzer.hpp \
   /home/debasish/Desktop/research/spinningcoin/bem_cpu/include/mesh_utils.hpp \
+  /home/debasish/Desktop/research/spinningcoin/bem_cpu/include/quadrature.hpp \
   /home/debasish/Desktop/research/spinningcoin/bem_cpu/include/trgl6_icos.hpp \
   /home/debasish/Desktop/research/spinningcoin/bem_cpu/include/vec3.hpp \
   /home/debasish/Desktop/research/spinningcoin/bem_cpu/include/write_vtk.hpp \
@@ -4503,11 +3646,7 @@ CMakeFiles/meshgen.dir/src/write_vtk.cpp.o: /home/debasish/Desktop/research/spin
 
 /home/debasish/Desktop/research/spinningcoin/bem_cpu/src/geometry_utility.cpp:
 
-/home/debasish/Desktop/research/spinningcoin/bem_cpu/include/quadrature.hpp:
-
-/home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/IntegralConstant.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/11/include/omp.h:
+/home/debasish/Desktop/research/spinningcoin/bem_cpu/include/geometry_utility.hpp:
 
 /usr/include/c++/11/bits/ptr_traits.h:
 
@@ -4699,6 +3838,8 @@ CMakeFiles/meshgen.dir/src/write_vtk.cpp.o: /home/debasish/Desktop/research/spin
 
 /usr/include/c++/11/pstl/execution_defs.h:
 
+/home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/BandMatrix.h:
+
 /usr/include/c++/11/bits/localefwd.h:
 
 /home/debasish/Desktop/research/spinningcoin/bem_cpu/include/geometry_analyzer.hpp:
@@ -4753,11 +3894,11 @@ CMakeFiles/meshgen.dir/src/write_vtk.cpp.o: /home/debasish/Desktop/research/spin
 
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
 
-/home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/BandMatrix.h:
-
 /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Block.h:
 
 /usr/include/c++/11/bits/fs_dir.h:
+
+/home/debasish/Desktop/research/spinningcoin/bem_cpu/include/quadrature.hpp:
 
 /usr/include/c++/11/array:
 
@@ -4779,13 +3920,7 @@ CMakeFiles/meshgen.dir/src/write_vtk.cpp.o: /home/debasish/Desktop/research/spin
 
 /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/ArrayBase.h:
 
-/usr/include/c++/11/bits/refwrap.h:
-
-/home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/ArrayWrapper.h:
-
 /usr/include/c++/11/vector:
-
-/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
 /usr/include/c++/11/bits/invoke.h:
 
@@ -4839,10 +3974,6 @@ CMakeFiles/meshgen.dir/src/write_vtk.cpp.o: /home/debasish/Desktop/research/spin
 
 /usr/include/c++/11/parallel/basic_iterator.h:
 
-/usr/include/c++/11/cstring:
-
-/home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/EigenSolver.h:
-
 /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/functors/TernaryFunctors.h:
 
 /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/MatrixBase.h:
@@ -4864,16 +3995,6 @@ CMakeFiles/meshgen.dir/src/write_vtk.cpp.o: /home/debasish/Desktop/research/spin
 /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/SVD/UpperBidiagonalization.h:
 
 /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/functors/BinaryFunctors.h:
-
-/home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/RealQZ.h:
-
-/home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/BlockMethods.h:
-
-/home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/EigenBase.h:
-
-/usr/include/c++/11/parallel/algo.h:
-
-/usr/include/c++/11/tr1/poly_hermite.tcc:
 
 /home/debasish/Desktop/research/spinningcoin/bem_cpu/main/main.cpp:
 
@@ -4925,6 +4046,16 @@ CMakeFiles/meshgen.dir/src/write_vtk.cpp.o: /home/debasish/Desktop/research/spin
 
 /usr/include/c++/11/istream:
 
+/home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/RealQZ.h:
+
+/home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/BlockMethods.h:
+
+/home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/EigenBase.h:
+
+/usr/include/c++/11/parallel/algo.h:
+
+/usr/include/c++/11/tr1/poly_hermite.tcc:
+
 /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Jacobi/Jacobi.h:
 
 /usr/include/c++/11/parallel/random_number.h:
@@ -4946,6 +4077,30 @@ CMakeFiles/meshgen.dir/src/write_vtk.cpp.o: /home/debasish/Desktop/research/spin
 /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/Householder:
 
 /usr/include/c++/11/bits/unordered_map.h:
+
+/home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/MatrixCwiseUnaryOps.h:
+
+/home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/functors/UnaryFunctors.h:
+
+/home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Cholesky/LLT.h:
+
+/usr/include/c++/11/parallel/partition.h:
+
+/home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/Eigenvalues:
+
+/home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/functors/StlFunctors.h:
+
+/usr/include/c++/11/cstdint:
+
+/usr/include/c++/11/parallel/merge.h:
+
+/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
+
+/home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/MathFunctions.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
+
+/home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/StableNorm.h:
 
 /usr/include/c++/11/bits/quoted_string.h:
 
@@ -4971,29 +4126,11 @@ CMakeFiles/meshgen.dir/src/write_vtk.cpp.o: /home/debasish/Desktop/research/spin
 
 /usr/include/c++/11/bits/streambuf_iterator.h:
 
-/home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/functors/UnaryFunctors.h:
+/home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Eigenvalues/EigenSolver.h:
 
-/home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Cholesky/LLT.h:
+/usr/include/c++/11/cstring:
 
-/usr/include/c++/11/parallel/partition.h:
-
-/home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/Eigenvalues:
-
-/home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/functors/StlFunctors.h:
-
-/usr/include/c++/11/cstdint:
-
-/usr/include/c++/11/parallel/merge.h:
-
-/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
-
-/home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/MathFunctions.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
-
-/home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/StableNorm.h:
-
-/home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/plugins/MatrixCwiseUnaryOps.h:
+/usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
 /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/Array.h:
 
@@ -5016,6 +4153,12 @@ CMakeFiles/meshgen.dir/src/write_vtk.cpp.o: /home/debasish/Desktop/research/spin
 /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/SSE/TypeCasting.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h:
+
+/home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/QR/CompleteOrthogonalDecomposition.h:
+
+/usr/include/c++/11/bits/basic_ios.h:
 
 /usr/include/c++/11/bits/uniform_int_dist.h:
 
@@ -5108,6 +4251,14 @@ CMakeFiles/meshgen.dir/src/write_vtk.cpp.o: /home/debasish/Desktop/research/spin
 /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/PlainObjectBase.h:
 
 /usr/include/c++/11/iosfwd:
+
+/home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/util/IntegralConstant.h:
+
+/home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/ArrayWrapper.h:
+
+/usr/include/c++/11/bits/refwrap.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/omp.h:
 
 /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/arch/Default/BFloat16.h:
 
@@ -5317,6 +4468,10 @@ CMakeFiles/meshgen.dir/src/write_vtk.cpp.o: /home/debasish/Desktop/research/spin
 
 /usr/include/c++/11/parallel/base.h:
 
+/home/debasish/Desktop/research/spinningcoin/bem_cpu/src/geometry_analyzer.cpp:
+
+/usr/include/c++/11/parallel/find_selectors.h:
+
 /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/ProductEvaluators.h:
 
 /usr/include/c++/11/parallel/compiletime_settings.h:
@@ -5435,9 +4590,9 @@ CMakeFiles/meshgen.dir/src/write_vtk.cpp.o: /home/debasish/Desktop/research/spin
 
 /usr/include/c++/11/bits/exception_ptr.h:
 
-/usr/include/math.h:
-
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h:
+
+/usr/include/math.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
@@ -5549,16 +4704,6 @@ CMakeFiles/meshgen.dir/src/write_vtk.cpp.o: /home/debasish/Desktop/research/spin
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/gthr.h:
 
-/home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/QR/CompleteOrthogonalDecomposition.h:
-
-/usr/include/c++/11/bits/basic_ios.h:
-
-/usr/include/x86_64-linux-gnu/c++/11/bits/messages_members.h:
-
-/usr/include/c++/11/parallel/find_selectors.h:
-
-/home/debasish/Desktop/research/spinningcoin/bem_cpu/src/geometry_analyzer.cpp:
-
 /home/debasish/Desktop/softwares/eigen-3.4.0/Eigen/src/Core/products/SelfadjointRank2Update.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h:
@@ -5586,5 +4731,3 @@ CMakeFiles/meshgen.dir/src/write_vtk.cpp.o: /home/debasish/Desktop/research/spin
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
 /usr/include/c++/11/set:
-
-/home/debasish/Desktop/research/spinningcoin/bem_cpu/include/geometry_utility.hpp:

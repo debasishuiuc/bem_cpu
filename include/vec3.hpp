@@ -77,17 +77,31 @@ struct Vec3 {
   double& operator[](int i) { return *(&x + i); }
   const double& operator[](int i) const { return *(&x + i); }
 
-  // Named accessors
-  double& x_() { return x; }
-  double& y_() { return y; }
-  double& z_() { return z; }
-
-  const double& x_() const { return x; }
-  const double& y_() const { return y; }
-  const double& z_() const { return z; }
 };
 
 // Global scalar * Vec3
 inline Vec3 operator*(double a, const Vec3& v) {
   return Vec3(a * v.x, a * v.y, a * v.z);
+}
+
+
+// Vec3 utility functions
+
+inline bool compare_vec3(const Vec3& a, const Vec3& b) {
+  for (int i = 0; i < 3; ++i) {
+    if (fabs(a[i] - b[i]) > 1e-12) return a[i] < b[i];
+  }
+  return false;
+}
+
+inline bool equal_vec3(const Vec3& a, const Vec3& b) {
+  return fabs(a[0] - b[0]) < 1e-12 &&
+         fabs(a[1] - b[1]) < 1e-12 &&
+         fabs(a[2] - b[2]) < 1e-12;
+}
+
+inline double dist(const Vec3& a, const Vec3& b) {
+  return std::sqrt((a[0] - b[0]) * (a[0] - b[0]) +
+                   (a[1] - b[1]) * (a[1] - b[1]) +
+                   (a[2] - b[2]) * (a[2] - b[2]));
 }

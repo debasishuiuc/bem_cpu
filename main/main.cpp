@@ -1,5 +1,6 @@
 // main.cpp
 
+#include "trgl6_icos.hpp"   
 #include "geometry_analyzer.hpp"      // CPU-only geometry computations
 #include "connectivity.hpp"  // compute_ne, compute_nbe, collect_edges
 #include "deduplicate.hpp"   // deduplicate_points
@@ -65,8 +66,6 @@ int main(int argc, char* argv[]) {
   auto t_geom_end = Clock::now();
   Duration geom_time = t_geom_end - t_geom_start;
   
-
-
 
   // Print decorated summary
   std::cout << "\n=== Mesh Statistics ===\n";

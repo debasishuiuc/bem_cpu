@@ -10,7 +10,6 @@
 #include <unordered_map>
 #include <utility>
 #include <cmath>
-#include <Eigen/Dense>
 
 // Hash and equality for Vec3
 struct Vec3Hash {
@@ -40,25 +39,9 @@ struct pair_hash {
   }
 };
 
-// Vec3 comparison helpers
-bool compare_vec3(const Vec3& a, const Vec3& b);
-bool equal_vec3(const Vec3& a, const Vec3& b);
-
 // Collect unique edges from 3-node triangles
 void collect_edges(const std::vector<std::array<int, 3>>& triangles,
                    std::vector<Edge>& edges);
-
-// Convert Vec3 to Eigen::Vector3d
-inline Eigen::Vector3d to_eigen(const Vec3& v) {
-  return Eigen::Vector3d(v[0], v[1], v[2]);
-}
-
-// Get element coordinates in Eigen format
-inline void get_element_coords_eigen(const Mesh& mesh, int elem_idx, std::array<Eigen::Vector3d, 6>& X_eigen) {
-  const auto& ni = mesh.n[elem_idx];
-  for (int i = 0; i < 6; ++i)
-    X_eigen[i] = to_eigen(mesh.p[ni[i]]);
-}
 
 // Summary print
 inline void print_mesh_summary(const Mesh& mesh, const std::string& label) {
