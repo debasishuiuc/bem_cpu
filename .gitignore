@@ -1,0 +1,49 @@
+# Build directories
+/build/
+/out/
+/bin/
+/lib/
+
+# CMake files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# IDEs and OS-generated files
+*.swp
+*.DS_Store
+*.idea/
+*.vscode/
+*.user
+*.suo
+*.ncb
+*.log
+
+# Object files, libraries, executables
+*.o
+*.obj
+*.a
+*.so
+*.dll
+*.dylib
+*.exe
+
+# Backup files
+*~
+*.bak
+*.old
+*.tmp
+
+# Compiled Python/CUDA cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.cubin
+*.ptx
+
+# Output data files
+*.vtk
+*.txt
+*.csv
