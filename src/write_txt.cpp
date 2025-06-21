@@ -7,39 +7,44 @@
 #include <iomanip>
 
 void write_txt(const Mesh& mesh, const GeometryAnalyzer& analyzer, const std::string& outdir) {
-  std::ofstream pfile(outdir + "p.txt");
-  std::ofstream nfile(outdir + "n.txt");
-  std::ofstream nefile(outdir + "ne.txt");
-  std::ofstream nbefile(outdir + "nbe.txt");
-  std::ofstream vncfile(outdir + "vnc.txt");
-  std::ofstream crvfile(outdir + "curvature.txt");
-  std::ofstream vnafile(outdir + "vna.txt");
+  std::ofstream pfile(outdir + "node_coords.txt");
+  std::ofstream nfile(outdir + "element_nodes.txt");
+  std::ofstream nefile(outdir + "node_to_elements.txt");
+  std::ofstream nbefile(outdir + "element_neighbors.txt");
+  std::ofstream vncfile(outdir + "element_normals.txt");
+  std::ofstream crvfile(outdir + "element_curvature.txt");
+  std::ofstream vnafile(outdir + "node_normals.txt");
   std::ofstream nodecurvfile(outdir + "node_curvature.txt");
 
-  if (!pfile || !nfile || !nefile || !nbefile || !vncfile || !crvfile || !vnafile) {
+  if (!pfile || !nfile || !nefile || !nbefile || !vncfile || !crvfile || !vnafile || !nodecurvfile) {
     std::cerr << "Error opening one or more output .txt files in " << outdir << "\n";
     return;
   }
 
   // Node coordinates
-  for (const auto& pt : mesh.p)
+  for (const auto& pt : mesh.nodeCoords)
     pfile << pt[0] << " " << pt[1] << " " << pt[2] << "\n";
 
   // 6-node triangle connectivity
-  for (const auto& tri : mesh.n)
+  for (const auto& tri : mesh.elementNodes)
     nfile << tri[0] << " " << tri[1] << " " << tri[2] << " "
           << tri[3] << " " << tri[4] << " " << tri[5] << "\n";
 
+  // Connectivity: node to elements (ne)
+  for (const auto& row : mesh.nodeToElements) {
+    // Print the count of connected elements (row[0]) first
+    nefile << row[0] << " ";
 
-  // Connectivity: ne (fallback: ne[i][0] is valence, ne[i][1:...] are neighbors)
-  for (const auto& row : mesh.ne) {
-    for (size_t j = 1; j <= row[0]; ++j)
+    // Print the element indices (starting from row[1] onward)
+    for (size_t j = 1; j <= row[0]; ++j)  // Start from 1 to skip the count
       nefile << row[j] << " ";
+
     nefile << "\n";
   }
-  
-  // Connectivity: nbe
-  for (const auto& nbs : mesh.nbe)
+
+
+  // Connectivity: element neighbors (nbe)
+  for (const auto& nbs : mesh.elementNeighbors)
     nbefile << nbs[0] << " " << nbs[1] << " " << nbs[2] << "\n";
 
   // Element normals (vnc)
@@ -54,19 +59,9 @@ void write_txt(const Mesh& mesh, const GeometryAnalyzer& analyzer, const std::st
   for (const auto& n : analyzer.nodeNormals)
     vnafile << n[0] << " " << n[1] << " " << n[2] << "\n";
 
-  
-  if (!nodecurvfile) {
-    std::cerr << "Error opening node_curvature.txt in " << outdir << "\n";
-    return;
-  }
-
-  // Write node curvature values (one per line)
-  for (double val : analyzer.nodeCurvature) {
+  // Node curvature (node_curvature)
+  for (double val : analyzer.nodeCurvature)
     nodecurvfile << std::fixed << std::setprecision(12) << val << "\n";
-  }
-
-  nodecurvfile.close();
-
 
   std::cout << "TXT files written to: " << outdir << "\n";
 }

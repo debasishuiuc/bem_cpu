@@ -62,15 +62,13 @@ int main(int argc, char* argv[]) {
   GeometryAnalyzer analyzer;
   analyzer.compute(mesh, 6);
   
-  // compute_geometry(mesh, 6); 
   auto t_geom_end = Clock::now();
   Duration geom_time = t_geom_end - t_geom_start;
-  
 
   // Print decorated summary
   std::cout << "\n=== Mesh Statistics ===\n";
   std::cout << "Subdivision level (Ndiv): " << Ndiv << "\n";
-  std::cout << "Points: " << mesh.Npts << ", Elements: " << mesh.Nelm << "\n";
+  std::cout << "Points: " << mesh.numNodes << ", Elements: " << mesh.numElements << "\n";
 
   std::cout << "\n=== Timing ===\n";
   std::cout << "Mesh generation took " << mesh_time.count() << " seconds.\n";
@@ -113,15 +111,15 @@ int main(int argc, char* argv[]) {
               << ", Threads=" << num_threads;
       logfile << ", MeshTime=" << std::scientific << mesh_time.count()
               << ", GeometryTime=" << geom_time.count()
-              << ", Npts=" << mesh.Npts
-              << ", Nelm=" << mesh.Nelm
+              << ", Npts=" << mesh.numNodes
+              << ", Nelm=" << mesh.numElements
               << ", SurfaceArea=" << std::fixed << analyzer.totalArea
-	      << ", Volume=" << analyzer.totalVolume
-	      << ", Centroid=[" << std::scientific
-	      << analyzer.surfaceCentroid[0] << " "
-	      << analyzer.surfaceCentroid[1] << " "
-	      << analyzer.surfaceCentroid[2] << "]"
-	      << "\n";
+              << ", Volume=" << analyzer.totalVolume
+              << ", Centroid=[" << std::scientific
+              << analyzer.surfaceCentroid[0] << " "
+              << analyzer.surfaceCentroid[1] << " "
+              << analyzer.surfaceCentroid[2] << "]"
+              << "\n";
 
       logfile.close();
       std::cout << "📝 Log written to: " << log_path << "\n";
@@ -129,7 +127,6 @@ int main(int argc, char* argv[]) {
       std::cerr << "Warning: could not open " << log_path << " for writing.\n";
     }
   }
-
 
   std::cout << "Ndiv = " << Ndiv << ", Threads = " << num_threads
             << ", Mesh Time = " << std::scientific << mesh_time.count()
@@ -146,51 +143,18 @@ int main(int argc, char* argv[]) {
       }
     }
 
-    compute_ne(mesh);
+    compute_node_adjacency_for_mesh(mesh);
     write_txt(mesh, analyzer, outdir);
 
     std::cout << "Writing VTK to: " << outdir + "mesh.vtk" << std::endl;
-    std::cout << "Number of elements = " << mesh.Nelm
-	      << ", Number of vnc = " << analyzer.elementNormals.size()
-	      << ", Number of crvmel = " << analyzer.elementCurvature.size() << std::endl;
+    std::cout << "Number of elements = " << mesh.numElements
+              << ", Number of vnc = " << analyzer.elementNormals.size()
+              << ", Number of crvmel = " << analyzer.elementCurvature.size() << std::endl;
 
     write_vtk(mesh, analyzer, outdir + "mesh.vtk");
     
     std::cout << "Mesh written to output/ directory.\n";
   }
 
-  // // Print element-to-element connectivity
-  // std::cout << "\nElement-to-element connectivity (nbe):\n";
-  // for (int i = 0; i < mesh.nbe.size(); ++i) {
-  //   std::cout << "Element " << i << " neighbors: ";
-  //   for (int j = 0; j < 3; ++j) {
-  //     std::cout << mesh.nbe[i][j] << " ";
-  //   }
-  //   std::cout << "\n";
-  // }
-
-  // // Print node-to-element connectivity
-  // std::cout << "\nNode-to-element connectivity (ne):\n";
-  // for (int i = 0; i < mesh.ne.size(); ++i) {
-  //   const auto& row = mesh.ne[i];
-  //   std::cout << "Node " << i << " elements: ";
-  //   if (!row.empty()) {
-  //     for (size_t j = 1; j <= static_cast<size_t>(row[0]); ++j) {
-  // 	std::cout << row[j] << " ";
-  //     }
-  //   }
-  //   std::cout << "\n";
-  // }
-
-  // std::cout << "\n6-node triangle connectivity (n):\n";
-  // for (int i = 0; i < mesh.Nelm; ++i) {
-  //   std::cout << "Element " << i << ": ";
-  //   for (int j = 0; j < 6; ++j) {
-  //     std::cout << mesh.n[i][j] << " ";
-  //   }
-  //   std::cout << "\n";
-  // }
-
- 
   return 0;
 }

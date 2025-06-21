@@ -6,30 +6,31 @@
 #include <cmath>
 #include "vec3.hpp"
 
-typedef double real;
+using real = double;
 
 // Mesh data structures
-typedef std::vector<Vec3> PointList;
-typedef std::array<int, 6> Element6;
-typedef std::vector<Element6> ElementList;
-typedef std::vector<std::vector<int>> Connectivity;
+using PointList = std::vector<Vec3>;
+using Element6 = std::array<int, 6>;  // 3 vertices + 3 mid-edge nodes
+using ElementList = std::vector<Element6>;
+using NodeToElementConnectivity = std::vector<std::vector<int>>; // node → elements
+using ElementToElementConnectivity = std::vector<std::array<int, 3>>; // element → neighbors
 
 struct Mesh {
-  int Ndiv;         // Number of subdivisions
-  int Npts;         // Number of points
-  int Nelm;         // Number of elements
-  PointList p;      // Coordinates of nodes
-  ElementList n;    // 6-node triangle connectivity
+  int subdivisionLevel = 0;       // Level of icosahedron refinement
+  int numNodes = 0;               // Total number of nodes
+  int numElements = 0;            // Total number of surface elements
 
-  
-  std::vector<std::vector<int>> ne; // Generate connectivity table: ne(i,j) for elements touching global node i
-  std::vector<std::array<int, 3>> nbe; // Element-to-neighbor connectivity
+  PointList nodeCoords;           // Global coordinates of nodes
+  ElementList elementNodes;       // Connectivity: global node indices per 6-node triangle
 
-  // Geometry data (computed later)
-  std::vector<std::array<double, 3>> vnc;  // Element normals at centroids
-  std::vector<double> crvmel;              // Mean curvature per element
-  std::vector<std::array<double, 3>> vna;  // Node normals
+  NodeToElementConnectivity nodeToElements;  // ne(i,j): elements connected to node i
+  ElementToElementConnectivity elementNeighbors; // nbe(i,j): neighbors of element i across edge j
+
+  // Geometry (computed post-mesh generation)
+  std::vector<Vec3> elementNormals;  // vnc: normals at element centroids
+  std::vector<double> elementCurvature;  // crvmel: mean curvature per element
+  std::vector<Vec3> nodeNormals;     // vna: normals at each node
 };
 
-// Function to generate mesh (defined in trgl6_icos.cpp)
-void trgl6_icos(Mesh& mesh, int Ndiv, int CCW = 1);
+// Function to generate triangulated spherical mesh
+void trgl6_icos(Mesh& mesh, int subdivisionLevel, int useCCWOrientation = 1);

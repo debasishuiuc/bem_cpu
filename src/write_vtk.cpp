@@ -15,17 +15,17 @@ void write_vtk(const Mesh& mesh, const GeometryAnalyzer& analyzer, const std::st
   file << "DATASET POLYDATA\n";
 
   // Write points
-  file << "POINTS " << mesh.Npts << " float\n";
-  for (const auto& pt : mesh.p)
+  file << "POINTS " << mesh.numNodes << " float\n";
+  for (const auto& pt : mesh.nodeCoords)
     file << pt[0] << " " << pt[1] << " " << pt[2] << "\n";
 
   // Write triangle connectivity (only the first 3 nodes for VTK)
-  file << "POLYGONS " << mesh.Nelm << " " << mesh.Nelm * 4 << "\n";
-  for (const auto& tri : mesh.n)
+  file << "POLYGONS " << mesh.numElements << " " << mesh.numElements * 4 << "\n";
+  for (const auto& tri : mesh.elementNodes)
     file << "3 " << tri[0] << " " << tri[1] << " " << tri[2] << "\n";
 
   // Cell data: normals and curvature
-  file << "CELL_DATA " << mesh.Nelm << "\n";
+  file << "CELL_DATA " << mesh.numElements << "\n";
 
   file << "VECTORS elem_normals float\n";
   for (const auto& v : analyzer.elementNormals)
@@ -35,7 +35,7 @@ void write_vtk(const Mesh& mesh, const GeometryAnalyzer& analyzer, const std::st
   for (const auto& k : analyzer.elementCurvature)
     file << k << "\n";
 
-  file << "POINT_DATA " << mesh.Npts << "\n";
+  file << "POINT_DATA " << mesh.numNodes << "\n";
 
   file << "SCALARS node_curvature float 1\nLOOKUP_TABLE default\n";
   for (const auto& val : analyzer.nodeCurvature)
@@ -44,7 +44,6 @@ void write_vtk(const Mesh& mesh, const GeometryAnalyzer& analyzer, const std::st
   file << "VECTORS node_normals float\n";
   for (const auto& n : analyzer.nodeNormals)
     file << n[0] << " " << n[1] << " " << n[2] << "\n";
-
 
   std::cout << "VTK file written successfully.\n";
 }

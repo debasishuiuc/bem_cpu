@@ -1,3 +1,0 @@
-ConnectivityTest 0 0
----
-ConnectivityTest

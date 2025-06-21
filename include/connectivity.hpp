@@ -6,11 +6,15 @@
 #include <vector>
 #include <array>
 
-void compute_nbe(const std::vector<std::array<int, 6>>&, std::vector<std::array<int, 3>>&);
+// Compute element-to-element connectivity (nbe)
+// Given the 6-node triangle list 'n', fills 'nbe' with neighboring element indices.
+void compute_element_neighbors(const std::vector<std::array<int, 6>>& n,
+                 std::vector<std::array<int, 3>>& nbe);
 
-// Accepts Vec3 points
-void compute_ne(const std::vector<std::array<int, 6>>& n,
+// Compute node-to-element connectivity (ne) using explicit nodes and points
+void compute_node_adjacency(const std::vector<std::array<int, 6>>& n,
                 const std::vector<Vec3>& p,
                 std::vector<std::vector<int>>& ne);
 
-void compute_ne(Mesh& mesh);
+// Overload that works directly with the Mesh object (fills mesh.ne)
+void compute_node_adjacency_for_mesh(Mesh& mesh);
